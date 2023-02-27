@@ -1,0 +1,50 @@
+{
+  "name": "montana_minting_dapp",
+  "version": "v1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@web3modal/ethereum": "^2.1.1",
+    "@web3modal/react": "^2.1.1",
+    "ethers": "^5.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-scripts": "^ 4.0.3",
+    "source-map-explorer": "^2.5.3",
+    "walletconnect": "^1.7.8",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.6.0",
+    "web3-eth-contract": "^1.6.0",
+    "web3-provider": "^1.0.0",
+    "web3modal": "^1.9.12"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Rezal Bukhari (PeryogiLabs)"
+}
