@@ -44,7 +44,7 @@ function Minter() {
       };
       const web3Modal = new Web3Modal({
         networkId: _contractJSON.chainId,
-        cacheProvider: true,
+        cacheProvider: false,
         providerOptions,
       });
       const provider = await web3Modal.connect();
@@ -148,7 +148,6 @@ function Minter() {
         loading: true,
         status: `Minting ${mintInfo.amount}...`,
       }));
-      // eslint-disable-next-line no-unused-vars
       const txHash = await info.web3.eth.call(params);
       setMintInfo((prevState) => ({
         ...prevState,
@@ -182,7 +181,6 @@ function Minter() {
   useEffect(() => {
     connectToContract(contract);
     initListeners();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -190,7 +188,6 @@ function Minter() {
       getSupply();
       getCost();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [info.connected]);
 
   return (
@@ -298,7 +295,7 @@ function Minter() {
           className="_90"
           target="_blank"
           rel="noreferrer"
-          href="https://polygonscan.com/token/0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB"
+          href="https://mumbai.polygonscan.com/token/0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB"
         >
           View Contract
         </a>
