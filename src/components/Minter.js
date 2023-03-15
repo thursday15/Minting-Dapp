@@ -51,7 +51,7 @@ function Minter() {
       const web3 = new Web3(provider);
       const accounts = await web3.eth.getAccounts();
       const networkId = await web3.eth.net.getId();
-      if (networkId === _contractJSON.chainId) {
+      if (networkId == _contractJSON.chainId) {
         setInfo((prevState) => ({
           ...prevState,
           connected: true,
@@ -224,7 +224,7 @@ function Minter() {
               }}
             >
               <button
-                disabled={!info.connected || mintInfo.cost === "0"}
+                disabled={!info.connected || mintInfo.cost == "0"}
                 className="small_button"
                 onClick={() => updateAmount(mintInfo.amount - 1)}
               >
@@ -232,7 +232,7 @@ function Minter() {
               </button>
               <div style={{ width: 10 }}></div>
               <button
-                disabled={!info.connected || mintInfo.cost === "0"}
+                disabled={!info.connected || mintInfo.cost == "0"}
                 className="button"
                 onClick={() => mint()}
               >
@@ -240,7 +240,7 @@ function Minter() {
               </button>
               <div style={{ width: 10 }}></div>
               <button
-                disabled={!info.connected || mintInfo.cost === "0"}
+                disabled={!info.connected || mintInfo.cost == "0"}
                 className="small_button"
                 onClick={() => updateAmount(mintInfo.amount + 1)}
               >
@@ -313,7 +313,7 @@ function Minter() {
           className="_90"
           target="_blank"
           rel="noreferrer"
-          href="https://polygonscan.com/token/0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB"
+          href="https://mumbai.polygonscan.com/token/0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB"
         >
           View Contract
         </a>
