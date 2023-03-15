@@ -12,8 +12,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-scripts": "^ 4.0.3",
-    "source-map-explorer": "^2.5.3",
+    "react-scripts": "^4.0.3",
     "walletconnect": "^1.7.8",
     "web-vitals": "^1.0.1",
     "web3": "^1.6.0",
@@ -22,7 +21,6 @@
     "web3modal": "^1.9.12"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "author": "Rezal Bukhari (PeryogiLabs)"
+  "author": "Rezal Bukhari (PeryogiLabs)",
+  "devDependencies": {
+    "@types/react": "^18.0.28"
+  }
 }

@@ -44,7 +44,7 @@ function Minter() {
       };
       const web3Modal = new Web3Modal({
         networkId: _contractJSON.chainId,
-        cacheProvider: true,
+        cacheProvider: false,
         providerOptions,
       });
       const provider = await web3Modal.connect();
@@ -67,9 +67,24 @@ function Minter() {
       } else {
         setInfo(() => ({
           ...initialInfoState,
-          status: `Change network to ${_contractJSON.chain}.`,
+          status: "Please install metamask or other wallet with WalletConnect support.",
         }));
       }
+      provider.on("accountsChanged", (accounts) => {
+        setInfo((prevState) => ({
+          ...prevState,
+          account: accounts[0],
+        }));
+      });
+
+      provider.on("chainChanged", (chainId) => {
+        window.location.reload(chainId);
+      });
+
+      provider.on("disconnect", () => {
+        setInfo(initialInfoState);
+        web3Modal.clearCachedProvider();
+      });
     } catch (err) {
       console.log(err.message);
       setInfo(() => ({
@@ -81,10 +96,10 @@ function Minter() {
   const initListeners = () => {
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", (accounts) => {
-        window.location.reload(accounts);
+        window.location.reload(accounts[0]);
       });
-      window.ethereum.on("chainChanged", (chainId) => {
-        window.location.reload(chainId);
+      window.ethereum.on("chainChanged", () => {
+        window.location.reload();
       });
     }
   };
@@ -148,8 +163,10 @@ function Minter() {
         loading: true,
         status: `Minting ${mintInfo.amount}...`,
       }));
-      // eslint-disable-next-line no-unused-vars
-      const txHash = await info.web3.eth.call(params);
+      const txHash = await window.ethereum.request({
+        method: "eth_sendTransaction",
+        params: [params],
+      });
       setMintInfo((prevState) => ({
         ...prevState,
         loading: false,
@@ -161,7 +178,7 @@ function Minter() {
       setMintInfo((prevState) => ({
         ...prevState,
         loading: false,
-        status: err.message,
+        status:err.message,
       }));
     }
   };
@@ -182,7 +199,6 @@ function Minter() {
   useEffect(() => {
     connectToContract(contract);
     initListeners();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -190,7 +206,6 @@ function Minter() {
       getSupply();
       getCost();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [info.connected]);
 
   return (

@@ -1,24 +1,18 @@
-# Welcome to HashLips 👄
+# Welcome to Montana Minting Dapp 🐸
 
-![](https://github.com/HashLips/hashlips_minting_card/blob/main/logo.png)
+![](https://github.com/thursday15/Minting-Dapp/blob/main/public/logo512.png)
 
-All the code in these repos was created and explained by HashLips on the main YouTube channel.
+All the code in these repos was created and explained by HashLips overwrite by PeryogiLabs to adding walletconnect.
 
 To find out more please visit:
 
-[📺 YouTube](https://www.youtube.com/channel/UC1LV4_VQGBJHTJjEWUmy8nA)
+[👄 Discord](https://discord.gg/Hx6YHdGxWj)
 
-[👄 Discord](https://discord.com/invite/qh6MWhMJDN)
+[🐦 Twitter](https://twitter.com/montana_matic)
 
-[💬 Telegram](https://t.me/hashlipsnft)
+[ℹ️ Website](https://montana.asia)
 
-[🐦 Twitter](https://twitter.com/hashlipsnft)
-
-[ℹ️ Website](https://hashlips.online/HashLips)
-
-# HashLips NFT minting dapp 🔥
-
-![](https://github.com/HashLips/hashlips_minting_card/blob/main/banner.png)
+# Montana NFTs minting dapp 🔥
 
 This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp.
 
@@ -27,7 +21,7 @@ This repo provides a nice and easy way for linking an existing NFT smart contrac
 If you are cloning the project then run this first, otherwise you can download the source code on the release page and skip this step.
 
 ```sh
-git clone https://github.com/HashLips/hashlips_minting_card.git
+git clone https://github.com/thursday15/Minting-Dapp.git
 ```
 
 Make sure you have node.js installed so you can use npm, then run:
@@ -36,6 +30,6 @@ Make sure you have node.js installed so you can use npm, then run:
 npm install
 ```
 
-## Usage ℹ️
+##bug?
 
-This repo will be used in a youtube tutorial.
+Please tell me or help to fork fixing and contact our support 🐸
