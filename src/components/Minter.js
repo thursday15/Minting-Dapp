@@ -36,9 +36,9 @@ function Minter() {
           package: WalletConnectProvider,
           options: {
             rpc: {
-              80001: "https://polygon-mumbai.g.alchemy.com/v2/spCORotdKi4K2op0x1kuehPkvzCnfb71",
+              137: "https://polygon-mainnet.g.alchemy.com/v2/EZN_7M4LpQXZ_PdKlzhI1ByJYyJvQS8J",
             },
-            chainId: 80001
+            chainId: 137
           },
         },
       };
@@ -313,7 +313,7 @@ function Minter() {
           className="_90"
           target="_blank"
           rel="noreferrer"
-          href="https://mumbai.polygonscan.com/token/0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB"
+          href="https://polygonscan.com/address/0x5cd4f5ade58d4a5af028bd9d8d3cf1579752c643"
         >
           View Contract
         </a>
