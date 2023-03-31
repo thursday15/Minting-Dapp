@@ -4,8 +4,8 @@
   "total_supply": 5555,
   "chain_symbol": "MATIC",
   "chain": "Polygon",
-  "chainId": 80001,
-  "address": "0xe24C18eC0A647c942b2bb239893E73f38c5dE4bB",
+  "chainId": 137,
+  "address": "0x5cd4f5ade58d4a5af028bd9d8d3cf1579752c643",
   "abi": [
     {
       "inputs": [
